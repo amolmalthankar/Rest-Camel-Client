@@ -1,0 +1,21 @@
+server:
+  port: 8304
+camel:
+  springboot:
+    name: rest-client
+management:
+  port: 8305
+endpoints:
+  enabled: false
+  health:
+    enabled: true
+applicationurls:
+  getemployee:
+    path: 'http4://localhost:8302/api/get-employee-service/rest/employee/1'
+  gettoken:
+    path: 'http4://localhost:8302/token'
+  addemployee:
+    path: 'http4://localhost:8302/api/add-employee-service/rest/employee/add'
+quickstart:
+  generateOrderPeriod: 10s
+  processOrderPeriod: 30s
